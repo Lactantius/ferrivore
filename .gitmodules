@@ -1,0 +1,6 @@
+[submodule "ferrivore-frontend"]
+	path = ferrivore-frontend
+	url = https://github.com/Lactantius/ferrivore-frontend
+[submodule "ferrivore-backend"]
+	path = ferrivore-backend
+	url = https://github.com/Lactantius/ferrivore-backend
