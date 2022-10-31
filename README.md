@@ -1,3 +1,3 @@
 # Ferrivore
 
-A website for good ideas.
+A website for idea discovery.
