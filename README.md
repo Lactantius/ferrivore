@@ -34,10 +34,12 @@ The frontend is a React app using React Router and written with TypeScript. It a
 
 ## Upcoming Features
 
--[ ] Many improvements to the collaborative filtering system
+- [ ] Many improvements to the collaborative filtering system
 
--[ ] System to commend posts for being particularly rational or well-written, which boosts them in the recommendation system
+- [ ] System to commend posts for being particularly rational or well-written, which boosts them in the recommendation system
 
--[ ] Reporting system to remove abusive posts
+- [ ] Reporting system to remove abusive posts
 
--[ ] Password recovery system
+- [ ] Password recovery system
+
+- [ ] Better styling, as always
