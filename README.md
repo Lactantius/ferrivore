@@ -26,6 +26,13 @@ The backend is a RESTful API written with the Flask framework and connected a Ne
 
 The frontend is a React app using React Router and written with TypeScript. It authenticates with the backend using JWTs.
 
+Currently there are only four options for a website visitor to get a new idea.
+
+1. Random: Gets a random idea that the user has not interacted with already.
+2. Popular: Gets the idea that the most global users have interacted positively with. It is not affected by the visitor's history.
+3. Disagreeable: Takes all users adjacent to the visitor, calculates their Pearson similarity score, then finds all the ideas those users interacted with but the visitor hasn't, multiplies that user's similarity score by that user's agreement score to get a measure of how likely the visitor is to agree with that idea, adds them all together, and returns the idea with the lowest score (usually negative). For more explanation, the algorithm is very similar to the one used [here](https://neo4j.com/developer/cypher/guide-build-a-recommendation-engine/). Internally, disagreement is measured with a negative number, so that a user with negative similarity score to the visitor who disagrees with an idea will _increase_ the idea's agreement score with the visitor.
+4. Agreeable: The same algorithm as the disagreeable option, but returning the highest score.
+
 ## Install/Deploy
 
 1. Start a Neo4j database. The default login details for testing and are in `__init__.py` in the backend, and the necessary constraints and indices can be found in `set_db_properties` in the `seed.py` file.
